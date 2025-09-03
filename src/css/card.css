@@ -1,0 +1,75 @@
+.card{
+    background-color: var(--card-bg-color);
+    border-radius: 12px;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border: 2px solid var(--primary-color);
+
+    min-height: 300px;
+
+    transition: var(--transition);
+}
+h1, h2, h3{
+    margin: 0;
+    margin-bottom: 7px;
+}
+.profile-table {
+    width: 100%;
+    border-collapse: collapse; /* Убираем двойные границы */
+    margin: 1rem 0; /* Отступ сверху и снизу */
+}
+
+.profile-table tr:not(:last-child) {
+    border-bottom: 2px solid var(--primary-color); /* Только нижние границы */
+
+}
+.profile-table tr td:not(:last-child){
+    border-right: 2px solid var(--primary-color); /* Только нижние границы */
+}
+.profile-table tr td:first-child{
+    max-width: 100px;
+}
+.profile-table tr td:last-child{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.profile-table td {
+    padding: 0.75rem 1rem; /* Комфортные отступы */
+    vertical-align: top; /* Выравнивание по верху */
+}
+
+.profile-table .label {
+    color: var(--primary-color);
+    width: 30%; /* Фиксированная ширина для меток */
+    font-weight: 500; /* Полужирные метки */
+}
+
+.profile-table .value {
+    color: var(--text-color);
+    word-break: break-word; /* Перенос длинных значений */
+}
+.copy svg{
+    cursor: pointer;
+    padding: 5px;
+    transition: var(--transition);
+}
+.copy svg:hover{
+    color: var(--primary-color);
+}
+.css-1uent87-MuiButtonBase-root-MuiButton-root{
+    color: var(--text-color) !important;
+}
+
+
+.price-tariff{
+    color: var(--text-color) !important;
+    border-bottom: 2px solid var(--primary-color);
+    border-top: 2px solid var(--primary-color);
+    width: 100%;
+    font-size: 3rem;
+}

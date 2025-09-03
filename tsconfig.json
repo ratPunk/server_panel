@@ -1,0 +1,34 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"],
+      "@css/*": ["./css/*"],
+      "@components/*": ["./components/*"],
+      "@modules/*": ["./modules/*"],
+      "@api/*": ["./api/*"],
+      "@fonts/*": ["fonts/*"],
+      "@images/*": ["./images/*"]
+    },
+    "allowJs": false,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["src", "fonts"],
+  "exclude": ["node_modules"]
+}

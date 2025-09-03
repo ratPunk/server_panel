@@ -1,0 +1,29 @@
+.button {
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+
+    transition: var(--transition);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+}
+.button:hover {
+    background-color: var(--primary-dark-hover);
+    /*transform: translateY(-2px);*/
+    transform: scale(0.989);
+    /*box-shadow: var(--focus-shadow);*/
+}
+span{
+    transition: var(--transition);
+}
+
+
+
