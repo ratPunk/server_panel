@@ -1,0 +1,96 @@
+@font-face{
+    font-family: 'Rubik';
+    src: url('@fonts/Rubik/Rubik-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+*{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+}
+:root {
+    /* Основные цвета */
+    --bg-color: #1e1e1e;
+    --card-bg-color: #333333;
+
+    /* Акценты — оранжевые оттенки */
+    --primary-color: #ffa726;     /* Основной оранжевый */
+    --primary-hover: #ff8f00;     /* Темнее при наведении */
+    --primary-dark-hover: #d17002;
+    --primary-active: #f57c00;    /* Ещё насыщеннее при клике */
+    --primary-light: #ffb74d;     /* Светлый оранжевый для подсветки */
+    --primary-dark: #ef6c00;      /* Тёмный оранжевый для текста */
+
+    /* Цвета текста */
+    --text-color: #ffffff;        /* Основной текст */
+    --text-secondary: #b0b0b0;    /* Вторичный текст */
+    --text-disabled: #666666;     /* Отключённый текст */
+    --text-on-primary: #000000;   /* Текст на оранжевом (чёрный для контраста) */
+
+    /* Тени */
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    --focus-shadow: 0 0 0 3px rgba(255, 167, 38, 0.3);
+
+    /* Размеры и форма */
+    --border-radius: 8px;         /* Скругление углов */
+    --input-radius: 6px;
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --text-size: 1rem;
+    --title-size: 1.5rem;
+
+    /* Анимации */
+    --transition: all 0.2s ease;
+    --hover-scale: 1.02;
+}
+body{
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--bg-color);
+}
+
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    /* Дополнительно: отключаем анимацию для пользователей, которым она не нужна */
+    animation-play-state: running;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    /* Дополнительно: отключаем анимацию для пользователей, которым она не нужна */
+    animation-play-state: running;
+}

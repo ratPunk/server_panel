@@ -1,0 +1,31 @@
+#Profile{
+    color: var(--text-color);
+    /*padding: 3rem 0;*/
+    height: 100vh;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+}
+
+#Profile .container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+
+    padding: 2rem 5rem;
+}
+.button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.button-container button{
+    width: 100%;
+}
+
+.error{
+    color: red;
+}

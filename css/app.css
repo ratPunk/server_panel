@@ -1,0 +1,14 @@
+/*#App{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+
+/*}*/
+.css-1ifsoei-MuiButtonBase-root-MuiFab-root{
+    /*color: var(--primary-color) !important;*/
+}
+.MuiTouchRipple-root{
+    color: var(--primary-color) !important;
+}
+.css-r3djoj-MuiTouchRipple-root{
+    color: var(--primary-color) !important;
+}

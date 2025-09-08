@@ -1,0 +1,126 @@
+#Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    padding: 1rem 5rem;
+
+    border-bottom: 2px solid var(--primary-color);
+
+    position: sticky;
+
+}
+
+#Header #basic-button {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+#Header #basic-button:hover {
+    background-color: var(--primary-dark-hover);
+}
+
+.MuiPaper-root {
+    background-color: var(--bg-color) !important;
+    border: 2px solid var(--primary-color);
+    color: var(--text-color) !important;
+}
+
+.MuiButtonBase-root:not(#basic-button) {
+    transition: var(--transition);
+    margin: 0.5rem 0;
+
+    padding: 0;
+}
+
+.MuiButtonBase-root:hover:not(#basic-button) {
+}
+
+.MuiList-root {
+    padding: 0;
+}
+
+.MuiButtonBase-root:not(#basic-button) {
+
+}
+.header-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo-text{
+    display: flex;
+    flex-direction: column;
+}
+.logo-name{
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.logo-secondary-text{
+    font-size: 0.9rem;
+}
+
+.letter {
+    font-weight: 700;
+    color: var(--text-color) !important;
+    display: inline-block;
+    width: 100%;
+    margin: 5px;
+}
+
+.letter:before, .letter:after {
+    content: "";
+    transition: 0.5s all ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.letter:before {
+    top: -0.25em;
+}
+
+.letter:after {
+    bottom: -0.4em;
+}
+
+.letter:before, .letter:after {
+    height: 2px;
+    width: 0;
+    background: var(--primary-color);
+}
+
+.letter:before {
+    right: 0;
+}
+
+.letter:after {
+    left: 0;
+}
+
+.letter:hover:before, .letter:hover:after {
+    width: 100%;
+}
+
+
+.breadcrumb {
+    color: var(--text-color) !important;
+    font-weight: 700;
+}
+
+

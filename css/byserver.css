@@ -1,0 +1,29 @@
+#ByServer {
+    /*margin-top: 40px;*/
+}
+.label-tariff{
+    color: var(--text-color);
+    padding: 20px;
+    margin-top: 40px;
+    /*background-color: var(--primary-color);*/
+    text-align: center;
+}
+.label-tariff h1{
+    font-size: 5.5rem;
+    font-family: 'Rubik', sans-serif !important;
+    font-weight: bold;
+}
+.secondary-label-tariff h3{
+    text-align: center;
+    color: var(--text-secondary);
+    font-family: 'Rubik', sans-serif !important;
+    font-weight: bold;
+
+}
+.container-favorite-tariff{
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
