@@ -3,7 +3,6 @@
     background: linear-gradient(135deg, var(--card-bg-color) 40%, var(--card-bg-color) 100%);
     border-radius: 20px;
     overflow: hidden;
-    /*width: 600px;*/
     height: 100%;
     position: relative;
     border: 2px solid var(--primary-color);
@@ -26,17 +25,18 @@
 .server-image-container {
     flex: 0 0 200px;
     background: var(--card-bg-color);
+    position: relative;
+    overflow: hidden;
 }
+
 .server-image-container::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    right: 369px;
     bottom: 0;
-    /* Градиент: чёрный с левой стороны → прозрачный */
-    background: linear-gradient(-90deg, var(--card-bg-color), rgba(0, 0, 0, 0.3));
-    pointer-events: none; /* чтобы не мешал кликам */
+    width: 30%;
+    pointer-events: none;
     z-index: 1;
 }
 
@@ -44,9 +44,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
-
-
+.server-card-horizontal:hover .server-image-horizontal {
+    transform: scale(1.05);
+}
 .server-content {
     flex: 1;
     padding: 45px 25px 25px 25px;
@@ -81,6 +83,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     margin-bottom: 20px;
+    height: 100%;
 }
 
 .spec {
@@ -91,6 +94,10 @@
     border-radius: 10px;
     text-align: center;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .spec-value {
@@ -133,4 +140,47 @@
 
 .btn-icon {
     font-size: 1.2rem;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .server-card-horizontal {
+        flex-direction: column;
+    }
+
+    .server-image-container {
+        flex: 0 0 180px;
+        width: 100%;
+    }
+
+    .server-image-container::before {
+        width: 100%;
+        height: 30%;
+        background: linear-gradient(
+                180deg,
+                var(--card-bg-color) 0%,
+                rgba(0, 0, 0, 0.3) 50%,
+                transparent 100%
+        );
+    }
+
+    .server-content {
+        padding: 25px 20px 20px 20px;
+    }
+}
+
+/* Адаптивность для очень маленьких экранов */
+@media (max-width: 480px) {
+    .server-image-container {
+        flex: 0 0 150px;
+    }
+
+    .server-content {
+        padding: 20px 16px 16px 16px;
+    }
+
+    .specs-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
 }
